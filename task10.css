@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap');
+
+body{
+ margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+.background{
+     background-image: url(bus.png);
+     background-size: contain;
+    width: auto;
+    height: 1100px;
+    background-repeat: no-repeat;
+   margin: 0px;
+   padding: 0px;
+   background-size: cover;
+ }
+
+ .cover{
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.6);
+ }
+.navbar{
+        position: sticky;
+    top: 0px;
+ width: auto;
+height: 70px;
+display: flex;
+justify-content: space-around;
+align-items: flex-start;
+}
+
+
+.logo{
+  margin-top: 20px;
+  margin-left: 100px;
+width: 30%;
+
+}
+
+
+img{
+    width: 170px;
+   
+}
+
+.navbar label span{
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+    display: none;
+}
+input{
+    display: none;
+}
+
+.navbar label{
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+@media (max-width:991px) {
+    .nav-list{
+        display: unset;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: thistle;
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+    }
+    
+    .navbar label span{
+        display: block;
+    }
+    .navbar #ins:checked ~ .nav-list{
+    left: -170px;
+    display: unset;
+    }
+
+    .nav-list .nav-item{
+        margin-bottom: 15px;
+    }
+}
+
+.nav-list{
+    list-style: none;
+    width: 30%;
+    text-align: right;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30%;
+}
+
+li{
+    margin-left: 15px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    /* padding: 10px;
+    border-radius: 10px; */
+    color: rgb(190, 24, 190);
+     margin-top: 20px;
+}
+
+.nav-list .nav-item{
+    position: relative;
+}
+
+.nav-list .nav-item .drop{
+      list-style: none;
+      position: absolute;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease ;
+      -webkit-transition: all 0.5s ease ;
+      -moz-transition: all 0.5s ease ;
+      -ms-transition: all 0.5s ease ;
+      -o-transition: all 0.5s ease ;
+}
+
+.nav-list .nav-item .drop li{
+    margin-bottom: 10px;
+}
+
+.nav-list .nav-item:hover .drop{
+    opacity: 1;
+visibility: visible;
+}
+
+
+.nav-item :hover{
+    color: #eee;
+}
+
+.co :hover{
+    color: #eee;
+}
+
+.nav-item.co{
+    background-color: deepskyblue;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.head{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.head .title{
+width: 50%;
+text-align: center;
+}
+
+
+.boxs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+ .boxs .task{
+    width: 22%;
+    height: 200px;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+.boxs .task h3{
+    text-align: center;
+}
+
+.boxs .task p{
+    text-align: center;
+}
+
+
+
+@media (max-width: 991px) {
+    .boxs .task {
+        width: 30%;
+    }
+}
+@media (max-width: 767px) {
+    .boxs .task{
+        width: 45%;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .boxs .task {
+        width: 100%;
+    }
+    
+}
